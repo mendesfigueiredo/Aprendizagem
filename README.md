@@ -1,3 +1,4 @@
-isso foi um teste para tentar entender com github. obrigado pela atneção e que segua sua vida
+_Olá, sou o Fernando. Aqui estarei postando alguns treinos em execícios que irei fazer ao longo do meu tempo de aprendizagem para que eu possa mostrar meu desenvolvimento como profissional.
 
-VIVA LA VIDA 
+Ass 
+  Fernando Sergio Mendes Figueiredo
