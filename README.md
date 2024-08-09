@@ -1,4 +1,5 @@
-_Olá, sou o Fernando. Aqui estarei postando alguns treinos em execícios que irei fazer ao longo do meu tempo de aprendizagem para que eu possa mostrar meu desenvolvimento como profissional.
+_Olá, sou o Fernando. Aqui estarei postando alguns treinos em execícios que irei fazer ao longo do meu tempo de aprendizagem para que eu possa mostrar meu desenvolvimento como profissional._
 
 Ass 
+
   Fernando Sergio Mendes Figueiredo
