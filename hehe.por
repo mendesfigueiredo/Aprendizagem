@@ -2,7 +2,8 @@ programa
 {
 	
 	funcao inicio()
-	{	
+	{
+	
 		inteiro a = 0
 		enquanto(a <= 100){
 			escreva(a, "\n")
