@@ -1,44 +1,90 @@
 programa
 {
-	funcao vetmanual(inteiro vet[]){
+	inclua biblioteca Util --> u
+	
+	funcao inteiro mediavalor(inteiro &vet[]){
+		inteiro media
+		media=(vet[0]+vet[1]+vet[2]+vet[3])/3
+		retorne media
+	}
+	
+	funcao vetautomatico(inteiro &vet[]){
+		escreva("Olha o valor indo pro vetor, hehe!\n\n")
+		para(inteiro i=0;i<4;i++){
+			vet[i]=u.sorteia(1, 10)
+		}
+		
+	}
+	
+	funcao vetmanual(inteiro &vet[]){
 		para(inteiro i=0; i<4; i++){
 			escreva("Qual valor deseja colocar nessa possição? ")
 			leia(vet[i])
 		}
-		para(inteiro contar=0; contar<4; contar++){
-			escreva(vet[contar], " ")
+		escreva("\n\n")
+	}
+
+	funcao imprimir(inteiro y ,inteiro &vet[]){
+		escreva("Os valores que estão nos vetores, são: ")
+		para(inteiro i=0;i<4;i++){
+			escreva(vet[i], ", ")
 		}
+		escreva("\n\n")
 	}
 	
-	funcao menu(inteiro x, inteiro vet[]){
-		escolha(x){
-			caso 1:
-			 //preencher manual
-			 vetmanual(vet)
-			pare
-			caso 2:
-			//preencher automatico
-			pare
-			caso 3:
-			escreva("Você selecionou a opção imprimir vetor. ")
-			pare
-			caso 4:
-			escreva("Você selecionour a opção imprimir a media dos valores. ")
-			pare
-			
-		}
+	funcao menu(inteiro &vet[]){
+		inteiro x
+		logico continua=falso
+		faca{
+			escreva("Qual opção do menu deseja acessar? ")
+			escreva("")
+			leia(x)
+			escreva("\n")	
+			escolha(x){
+				caso 1:
+				
+				vetmanual(vet)
+				continua=verdadeiro
+				
+				pare
+				caso 2:
+				
+				vetautomatico(vet)
+				continua=verdadeiro
+				
+				pare
+				caso 3:
+				
+				imprimir(x,vet)
+				continua=verdadeiro
+				
+				pare
+				caso 4:
+				
+				inteiro valorMedia
+				
+				valorMedia=mediavalor(vet)
+				escreva("A media dos valores que preenchem o vetor é: ", valorMedia, "\n\n")
+				
+				continua=verdadeiro
+				
+				pare
+				caso contrario:
+				
+				escreva("A opção digitada não está no menu.")
+				continua=falso
+				
+				pare
+				
+			}
+		}enquanto(continua==verdadeiro)	
 	}
 	
 	funcao inicio()
 	{
-		inteiro menuSelecao
 		inteiro vet[4]
 
-		escreva("Qual opção do menu deseja acessar? ")
-		leia(menuSelecao)
-
-		menu(menuSelecao, vet
-		)
+		menu(vet)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -46,9 +92,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 227; 
+ * @POSICAO-CURSOR = 528; 
+ * @DOBRAMENTO-CODIGO = [4, 10, 18, 26, 34];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {vet, 19, 27, 3}-{vet, 27, 37, 3};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
