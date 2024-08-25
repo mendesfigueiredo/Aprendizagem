@@ -3,9 +3,12 @@ programa
 	inclua biblioteca Util --> u
 	
 	funcao inteiro mediavalor(inteiro &vet[]){
-		inteiro media
-		media=(vet[0]+vet[1]+vet[2]+vet[3])/3
-		retorne media
+		inteiro soma, media
+		para(inteiro i=0; i<4; i++){
+			soma = soma + vet[i]
+			media = soma/4
+		}
+		escreva("A media dos valores que estão no vetor, é: ", media)
 	}
 	
 	funcao vetautomatico(inteiro &vet[]){
