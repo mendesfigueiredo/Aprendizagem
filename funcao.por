@@ -1,89 +1,47 @@
 programa {
-  
-  /*funcao inteiro calculo(inteiro x, inteiro y, inteiro z){
-    inteiro media
-    media=(x+y+z)/3
+  inclua biblioteca Util --> u
+
+  funcao inteiro mediatres(){
+    inteiro media, a, b, c
+
+    escreva("Qual a nota dos alunos? \n>>")
+    leia(a)
+    limpa()
+
+    escreva(">> ")
+    leia(b)
+    limpa()
+
+    escreva(">> ")
+    leia(c)
+    limpa()
+
+    media = (a+b+c)/3
     retorne media
   }
-
   
-  funcao inicio() {
-    inteiro a, b, c
-
-    escreva("Digite as notas dos tr√™s alunos: ")
-    leia(a)
-    leia(b)
-    leia(c)
-
-    escreva(calculo(a, b, c), "\n")
-    escreva(a, " ", b, " ", c)
-  }*/
-  /*inclua biblioteca Util --> u
-  
-  funcao inteiro conta(inteiro x, inteiro &y){
-    se(x%2 == 0){
-      y++
-    }
-    retorne y
-  }
-
-  funcao inicio() {
-    inteiro valor, opa=0, continuar=1
-
+  funcao menu(){
+    
+    inteiro opcaoMenu
+    logico menuContinuar
     faca{
-      escreva("Digite um valor: ")
-      leia(valor)
-      
-      u.aguarde(500)
+    escreva("Qual exercÌcio deseja acessar? ")
+    escreva("\n1)A media de 3 valores.\n2)N valores e a quantidade de pares.\n3)MultiplicaÁ„o de n˙meros reias.\n\n>> ")
+
+    leia(opcaoMenu)
+    se(opcaoMenu == 1){
+      escreva("A media dos valores È: ", mediatres())
+      u.aguarde(2000)
       limpa()
+      menuContinuar = verdadeiro 
+    }senao se(opcaoMenu == 2){
 
-      escreva("Quer digitar outro valo, se sim, digite 1: ")
-      leia(continuar)
-      
-      u.aguarde(500)
-      limpa()
+    }
 
-      conta(valor, opa)
-    }enquanto(continuar==1)
-    escreva("Os pares s√£o: ")
-    escreva(opa)
-  }*/
-	/*funcao real conta(real x, real y){
-		real resultado
-		resultado = x*y
-		retorne resultado
-	}
-	
-	funcao inicio(){
-		real valorUm, valorDois
-
-		escreva("Digite os dois valores que deseja multiplicar:  ")
-		leia(valorUm)
-		leia(valorDois)
-
-		escreva(conta(valorUm, valorDois))
-	}*/
-	funcao inteiro mostrar(inteiro x){
-		retorne x
-	}
-	
-	funcao inicio(){
-		inteiro tamanhoQdr[6]
-		caracter quadrado='o'
-
-		escreva("")
-		
-	}
+    }enquanto(menuContinuar == verdadeiro)
+  }
+ 
+  funcao inicio() {
+    menu()
+  }
 }
-
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta se√ß√£o do arquivo guarda informa√ß√µes do Portugol Studio.
- * Voc√™ pode apag√°-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1199; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
