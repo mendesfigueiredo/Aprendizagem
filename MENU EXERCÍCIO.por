@@ -6,8 +6,8 @@ programa {
   		escreva("Qual valor deseja colocar nesse vetor: ")
   		leia(vet[i])
   		
-  		u.aguarde(1000)
-      	limpa()
+      u.aguarde(1000)
+      limpa()
   	}
   }
   
